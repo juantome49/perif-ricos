@@ -21,13 +21,46 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 50px;
         }
+        /* Estilo de la década de 1990: Web retro */
+        .decade-1990 {
+            background-color: #ffcc00; /* Amarillo chillón */
+            color: #0000ff; /* Azul eléctrico */
+            font-family: 'Comic Sans MS', 'Arial', sans-serif;
+            border: 5px dashed #ff00ff;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .decade-1990 h2, .decade-1990 h3 {
+            color: #ff0000;
+            border-color: #ff0000;
+        }
+        .under-construction {
+            display: block;
+            margin: 10px auto;
+            width: 150px;
+        }
+        /* Estilo de la década de 2000: Web 2.0 */
+        .decade-2000 {
+            background-image: linear-gradient(to bottom, #d9e7f5, #ffffff);
+            border: 1px solid #c9d8e7;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .decade-2000 h2, .decade-2000 h3 {
+            color: #34495e;
+            text-shadow: 1px 1px 2px #ccc;
+        }
+        .decade-2000 ul {
+            background-color: rgba(255,255,255,0.5);
+            padding: 15px;
+            border-radius: 10px;
+        }
         h2 {
             border-bottom: 1px solid #e74c3c;
             padding-bottom: 5px;
             margin-top: 30px;
         }
         h3 {
-            color: #34495e;
             border-bottom: 1px dashed #bdc3c7;
             margin-top: 20px;
         }
@@ -56,27 +89,32 @@
 <body>
 
 <div class="container">
-    <a href="caratula.html">Volver a la carátula</a>
+    <a href="index.html">Volver a la carátula</a>
     
     <hr>
     
-    <h2 id="decade-1990">Década de 1990</h2>
-    <p>La década de 1990 fue testigo de la explosión de Internet y la multimedia. Los periféricos se volvieron más especializados y se mejoró la conectividad entre ellos, estandarizando interfaces como los puertos PS/2 y USB. El CD-ROM se convirtió en el medio de almacenamiento dominante, mientras que los gráficos y el sonido en los PC alcanzaron nuevos niveles.</p>
-    <ul>
-        <li><strong>Entrada:</strong> Teclados y ratones PS/2, micrófonos para tarjetas de sonido, cámaras web (los primeros modelos), tabletas digitalizadoras, gamepads y volantes para juegos, lápices ópticos.</li>
-        <li><strong>Salida:</strong> Monitores CRT con resoluciones SVGA, altavoces estéreo y con subwoofer, proyectores (los primeros modelos portátiles), auriculares con cable.</li>
-        <li><strong>Almacenamiento y Comunicación:</strong> CD-ROM, CD-R y CD-RW, Zip Drive y discos Jaz, discos duros externos con conexiones Paralelas y SCSI, tarjeta de red Ethernet, conmutadores y concentradores (hubs).</li>
-    </ul>
+    <div class="decade-1990">
+        <h2 id="decade-1990">Década de 1990</h2>
+        <p>La década de 1990 fue testigo de la explosión de Internet y la multimedia. Los periféricos se volvieron más especializados y se mejoró la conectividad entre ellos, estandarizando interfaces como los puertos PS/2 y USB. El CD-ROM se convirtió en el medio de almacenamiento dominante, mientras que los gráficos y el sonido en los PC alcanzaron nuevos niveles.</p>
+        <img class="under-construction" src="https://i.imgur.com/g0t6F4n.gif" alt="GIF de sitio en construcción">
+        <ul>
+            <li><strong>Entrada:</strong> Teclados y ratones PS/2, micrófonos para tarjetas de sonido, cámaras web (los primeros modelos), tabletas digitalizadoras, gamepads y volantes para juegos, lápices ópticos.</li>
+            <li><strong>Salida:</strong> Monitores CRT con resoluciones SVGA, altavoces estéreo y con subwoofer, proyectores (los primeros modelos portátiles), auriculares con cable.</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> CD-ROM, CD-R y CD-RW, Zip Drive y discos Jaz, discos duros externos con conexiones Paralelas y SCSI, tarjeta de red Ethernet, conmutadores y concentradores (hubs).</li>
+        </ul>
+    </div>
     
     <hr>
 
-    <h2 id="decade-2000">Década de 2000</h2>
-    <p>La década de 2000 estuvo marcada por la consolidación del internet de alta velocidad y la miniaturización de la tecnología. Los monitores CRT fueron reemplazados por las pantallas planas y los periféricos inalámbricos se volvieron una realidad accesible. El USB se convirtió en el conector universal, impulsando la portabilidad del almacenamiento y la conectividad.</p>
-    <ul>
-        <li><strong>Entrada:</strong> Teclados y ratones inalámbricos (RF y Bluetooth), lector de huellas dactilares, controladores para consolas de videojuegos con vibración, cámaras web con mayor resolución y enfoque automático, lectores de tarjetas de memoria.</li>
-        <li><strong>Salida:</strong> Monitores LCD (pantallas planas), impresoras multifunción (impresión, escaneo y fax), altavoces 5.1 y 7.1, pantallas de plasma, proyectores de alta definición.</li>
-        <li><strong>Almacenamiento y Comunicación:</strong> Memorias USB (pendrives), discos duros externos USB 2.0, unidades de DVD-ROM y DVD-RW, Blu-ray, tarjetas de red Wi-Fi.</li>
-    </ul>
+    <div class="decade-2000">
+        <h2 id="decade-2000">Década de 2000</h2>
+        <p>La década de 2000 estuvo marcada por la consolidación del internet de alta velocidad y la miniaturización de la tecnología. Los monitores CRT fueron reemplazados por las pantallas planas y los periféricos inalámbricos se volvieron una realidad accesible. El USB se convirtió en el conector universal, impulsando la portabilidad del almacenamiento y la conectividad.</p>
+        <ul>
+            <li><strong>Entrada:</strong> Teclados y ratones inalámbricos (RF y Bluetooth), lector de huellas dactilares, controladores para consolas de videojuegos con vibración, cámaras web con mayor resolución y enfoque automático, lectores de tarjetas de memoria.</li>
+            <li><strong>Salida:</strong> Monitores LCD (pantallas planas), impresoras multifunción (impresión, escaneo y fax), altavoces 5.1 y 7.1, pantallas de plasma, proyectores de alta definición.</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> Memorias USB (pendrives), discos duros externos USB 2.0, unidades de DVD-ROM y DVD-RW, Blu-ray, tarjetas de red Wi-Fi.</li>
+        </ul>
+    </div>
 
     <div class="navigation">
         <a href="pagina2.html">Página anterior</a> | <a href="pagina4.html">Siguiente página</a>
