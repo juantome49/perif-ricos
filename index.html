@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución de los Periféricos de Computación</title>
+    <style>
+        @page {
+            margin: 2.54cm; /* Márgenes estándar para impresión */
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #000;
+            counter-reset: page; /* Resetea el contador de páginas */
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 50px;
+            box-sizing: border-box;
+            page-break-after: always; /* Simula un salto de página para impresión */
+            position: relative; /* Para el posicionamiento del pie de página */
+        }
+        .numbered-page {
+            counter-increment: page; /* Incrementa el contador de páginas */
+        }
+        #cover-page {
+            justify-content: center;
+            text-align: center;
+            padding: 100px;
+        }
+        #cover-page h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        #cover-page p {
+            font-size: 1em;
+            color: #7f8c8d;
+        }
+        #toc-page h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .toc-list {
+            list-style-type: none;
+            padding-left: 20px;
+            font-size: 1em;
+        }
+        .toc-list li {
+            margin: 10px 0;
+        }
+        .toc-list a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+        }
+        h2 {
+            border-bottom: 1px solid #e74c3c;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #34495e;
+            border-bottom: 1px dashed #bdc3c7;
+            margin-top: 20px;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        .header {
+            text-align: right;
+            font-size: 10pt;
+            position: absolute;
+            top: 25px;
+            right: 50px;
+            width: 100%;
+        }
+        .footer {
+            text-align: center;
+            font-size: 10pt;
+            color: #555;
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .numbered-page .footer::after {
+            content: "Página " counter(page);
+        }
+        .sources {
+            font-size: 10pt;
+            color: #7f8c8d;
+            margin-top: 40px;
+        }
+        .sources a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .sources a:hover {
+            text-decoration: underline;
+        }
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #bdc3c7;
+            margin: 30px 0;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-container {
+            width: 45%;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background-color: #f9f9f9;
+        }
+        .image-container p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="cover-page" class="page">
+        <h1>Evolución de los Periféricos de Computación</h1>
+        <p>Un análisis histórico de 1970 a 2025</p>
+        <br><br>
+        <p><strong>Carrera:</strong> Tecnicatura Superior en Análisis de Sistemas e Información</p>
+        <p><strong>Materia:</strong> ARQUITECTURA DE COMPUTADORES</p>
+        <p><strong>Profesor:</strong> Dell Arciprete Darío</p>
+        <p><strong>Autor:</strong> Juan Pablo Tomé</p>
+        <p><strong>Fecha:</strong> Septiembre 2025</p>
+    </div>
+
+    <div id="toc-page" class="page">
+        <div class="header">Evolución de los Periféricos</div>
+        <h2>Índice</h2>
+        <ul class="toc-list">
+            <li><a href="#cover-page">Carátula</a></li>
+            <li><a href="#toc-page">Índice</a></li>
+            <li><a href="#decade-1970">1. Década de 1970</a></li>
+            <li><a href="#decade-1980">2. Década de 1980</a></li>
+            <li><a href="#decade-1990">3. Década de 1990</a></li>
+            <li><a href="#decade-2000">4. Década de 2000</a></li>
+            <li><a href="#decade-2010">5. Década de 2010</a></li>
+            <li><a href="#decade-2020">6. Década de 2020 a 2025</a></li>
+            <li><a href="#image-gallery">7. Galería de Imágenes</a></li>
+            <li><a href="#bibliography">8. Citas Bibliográficas</a></li>
+        </ul>
+        <div class="footer">Página de contenido</div>
+    </div>
+
+    <div class="page numbered-page" id="content-start">
+        <div class="header">Evolución de los Periféricos</div>
+        
+        <hr>
+        
+        <h2 id="decade-1970">Década de 1970</h2>
+        <p>En la década de 1970, la computación comenzaba a popularizarse, aunque los periféricos eran rudimentarios y costosos. Los sistemas se basaban en la interacción a través de terminales de texto, y el almacenamiento dependía de tecnologías magnéticas voluminosas. La integración de estos dispositivos era compleja y a menudo requería de interfaces propietarias.</p>
+        <ul>
+            <li><strong>Entrada:</strong> Teclados alfanuméricos y de membrana, tarjetas perforadas y lectoras de cinta de papel, interruptores DIP.</li>
+            <li><strong>Salida:</strong> Monitores CRT monocromáticos (verde o ámbar), impresoras matriciales de puntos, plotters de pluma y trazadores gráficos.</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> Disquetes de 8 pulgadas, cintas magnéticas para almacenamiento masivo, unidades de casete, puertos de E/S paralelos y seriales.</li>
+        </ul>
+        
+        <hr>
+
+        <h3><span class="emoji">⌨️</span> Periféricos de Entrada</h3>
+        
+        <h4>Teclados alfanuméricos y de membrana</h4>
+        <p>Los <strong>teclados alfanuméricos</strong> de los años 70 eran rudimentarios en comparación con los actuales. Eran voluminosos y mecánicos, con interruptores individuales debajo de cada tecla. Los <strong>teclados de membrana</strong>, por otro lado, eran una alternativa más económica. Funcionaban con una capa de goma o plástico que, al presionarse, hacía contacto con una superficie conductora para registrar la pulsación. Eran menos precisos y no ofrecían la misma sensación táctil que los mecánicos.</p>
+
+        <h4>Tarjetas perforadas y lectoras de cinta de papel</h4>
+        <p>Las <strong>tarjetas perforadas</strong> eran el método principal para ingresar datos y programas en las computadoras. Se utilizaba una máquina, llamada perforadora, para hacer agujeros en la tarjeta que representaban un código binario. Las <strong>lectoras de cinta de papel</strong> cumplían una función similar, pero usaban una tira de papel en la que los datos se grababan mediante perforaciones. A pesar de su antigüedad, este método fue fundamental para el inicio de la computación.</p>
+
+        <h4>Interruptores DIP (Dual In-line Package)</h4>
+        <p>Los <strong>interruptores DIP</strong> eran un conjunto de pequeños interruptores manuales, montados en un encapsulado de circuito integrado, que se usaban para configurar las opciones de un hardware. Por ejemplo, podían cambiar la dirección de memoria de un dispositivo o habilitar/deshabilitar ciertas funciones. Eran comunes en las primeras tarjetas madre y tarjetas de expansión.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">🖥️</span> Periféricos de Salida</h3>
+        
+        <h4>Monitores CRT monocromáticos (verde o ámbar)</h4>
+        <p>Los <strong>monitores CRT (Tubo de Rayos Catódicos)</strong> fueron los predecesores de las pantallas LCD y LED. En los 70, la mayoría eran <strong>monocromáticos</strong>, es decir, solo mostraban un color (generalmente verde o ámbar) sobre un fondo negro. Estos monitores eran voluminosos y pesados debido a la tecnología de tubo de vacío que utilizaban para mostrar la imagen.</p>
+
+        <h4>Impresoras matriciales de puntos</h4>
+        <p>Las <strong>impresoras matriciales de puntos</strong> creaban caracteres e imágenes golpeando una cinta de tinta con una matriz de pines. Cada pin, al impactar, dejaba un punto en el papel. La combinación de estos puntos formaba la imagen o el texto. Eran ruidosas y lentas, pero muy duraderas, lo que las hacía muy populares en oficinas.</p>
+
+        <h4>Plotters de pluma y trazadores gráficos</h4>
+        <p>Los <strong>plotters</strong> (también conocidos como trazadores gráficos) eran dispositivos de salida que usaban plumas de colores para dibujar líneas continuas en papel. Eran ideales para generar gráficos de alta precisión, como planos arquitectónicos, mapas o diagramas de ingeniería.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">💾</span> Almacenamiento y Comunicación</h3>
+
+        <h4>Disquetes de 8 pulgadas</h4>
+        <p>Los <strong>disquetes de 8 pulgadas</strong> fueron uno de los primeros medios de almacenamiento portátiles de datos. Consistían en un disco flexible magnético dentro de una funda de plástico cuadrada. Tenían una capacidad de almacenamiento muy limitada, generalmente menos de un megabyte, pero representaron un gran avance en la portabilidad de datos.</p>
+
+        <h4>Cintas magnéticas para almacenamiento masivo</h4>
+        <p>Las <strong>cintas magnéticas</strong>, similares a los casetes de audio, se usaban para <strong>almacenamiento masivo</strong>. A diferencia de los discos, el acceso a la información era <strong>secuencial</strong>: para encontrar un dato, había que rebobinar o avanzar la cinta. Eran lentas, pero su bajo costo y alta capacidad las hacían ideales para copias de seguridad de grandes volúmenes de datos.</p>
+
+        <h4>Unidades de casete</h4>
+        <p>Las <strong>unidades de casete</strong> adaptaban la tecnología de las cintas de audio para almacenar datos en computadoras personales. Eran una opción de almacenamiento muy popular y asequible, especialmente en los primeros ordenadores domésticos, aunque su velocidad era muy baja.</p>
+
+        <h4>Puertos de E/S paralelos y seriales</h4>
+        <p>Los <strong>puertos de E/S (Entrada/Salida) paralelos</strong> enviaban datos de forma simultánea a través de múltiples líneas (bits en paralelo), lo que los hacía más rápidos para grandes volúmenes de datos. Eran comunes para conectar impresoras. Por otro lado, los <strong>puertos seriales</strong> transmitían la información bit a bit por una única línea, siendo más lentos pero ideales para dispositivos como módems.</p>
+        
+        <div class="footer"></div>
+    </div>
+
+    <div class="page numbered-page">
+        <div class="header">Evolución de los Periféricos</div>
+        
+        <h2 id="decade-1980">Década de 1980</h2>
+        <p>En la década de 1980, la computación personal experimentó un auge sin precedentes. La llegada de la interfaz gráfica y los videojuegos impulsó la creación de periféricos más intuitivos, mientras que el almacenamiento se hizo más accesible y portátil. La conectividad comenzó a ser un factor clave con la popularización de los módems.</p>
+        <ul>
+            <li><strong>Entrada:</strong> Ratón de bola (mecánico), teclado IBM PC/AT, joysticks y paddles para videojuegos, trackball, escáneres de mano y de cama plana.</li>
+            <li><strong>Salida:</strong> Monitores CRT a color (CGA, EGA, VGA), impresoras de inyección de tinta, impresoras láser, altavoces PC Speaker (interno).</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> Disquetes de 5.25 y 3.5 pulgadas, módems de conexión telefónica (dial-up), cintas de backup (DC2000, QIC), discos duros externos SCSI.</li>
+        </ul>
+        
+        <hr>
+
+        <h3><span class="emoji">⌨️</span> Periféricos de Entrada</h3>
+
+        <h4>Ratón de bola (mecánico)</h4>
+        <p>El <strong>ratón de bola</strong>, inventado en los 70, se popularizó en los 80 con la llegada de las interfaces gráficas de usuario (GUI). Funciona con una bola de goma o metal en su interior que, al moverse, hace girar dos rodillos que traducen el movimiento en señales para el cursor en pantalla. Este diseño mecánico fue el estándar hasta la llegada de los ratones ópticos en la década siguiente.</p>
+
+        <h4>Teclado IBM PC/AT</h4>
+        <p>El <strong>teclado IBM PC/AT</strong> se convirtió en un estándar de la industria. Era un teclado mecánico de 84 o 101 teclas, conocido por su diseño robusto, respuesta táctil y el sonido distintivo de las teclas (clic-clac). Su disposición, con el bloque numérico y las teclas de función, sentó las bases para los teclados modernos.</p>
+
+        <h4>Joysticks y paddles para videojuegos</h4>
+        <p>Los <strong>joysticks</strong> y <strong>paddles</strong> eran periféricos esenciales para la creciente industria de los videojuegos. Un joystick es una palanca que se usa para controlar el movimiento en los juegos, mientras que un paddle es un controlador con una rueda o perilla para mover un objeto en un solo eje, como en los juegos de Pong.</p>
+
+        <h4>Trackball</h4>
+        <p>El <strong>trackball</strong> es un dispositivo de entrada similar a un ratón, pero invertido. La bola está en la parte superior y se manipula directamente con la palma de la mano o los dedos. El dispositivo en sí permanece estacionario. Eran populares en entornos de trabajo con espacio limitado en el escritorio.</p>
+
+        <h4>Escáneres de mano y de cama plana</h4>
+        <p>La década de 1980 vio la llegada de los primeros <strong>escáneres</strong> para el consumidor. Los <strong>escáneres de mano</strong> eran pequeños dispositivos que se pasaban manualmente sobre una imagen o documento para digitalizarlo. Los <strong>escáneres de cama plana</strong>, más grandes y costosos, permitían escanear una hoja completa de una sola vez, ofreciendo mayor precisión.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">🖥️</span> Periféricos de Salida</h3>
+        
+        <h4>Monitores CRT a color (CGA, EGA, VGA)</h4>
+        <p>La gran revolución de la década fue el paso del color. Los <strong>monitores CRT</strong> evolucionaron con nuevas tarjetas gráficas que ofrecían más colores y resoluciones. Los estándares más populares fueron:</p>
+        <ul>
+            <li><strong>CGA (Color Graphics Adapter):</strong> El primer estándar, con 4 colores y una resolución máxima de 320x200 píxeles.</li>
+            <li><strong>EGA (Enhanced Graphics Adapter):</strong> Una mejora sobre CGA, ofreciendo 16 colores y una resolución de 640x350 píxeles.</li>
+            <li><strong>VGA (Video Graphics Array):</strong> El estándar más avanzado de la década, con 256 colores y una resolución de 640x480 píxeles.</li>
+        </ul>
+
+        <h4>Impresoras de inyección de tinta</h4>
+        <p>Las <strong>impresoras de inyección de tinta</strong> revolucionaron la impresión al ofrecer una alternativa silenciosa y de mayor calidad a las matriciales. Funcionan rociando pequeñas gotas de tinta sobre el papel, lo que permite imprimir tanto texto como gráficos a color con gran detalle.</p>
+
+        <h4>Impresoras láser</h4>
+        <p>Las <strong>impresoras láser</strong> fueron introducidas al mercado de consumo, aunque eran muy costosas. Usaban un rayo láser para crear una imagen en un tambor fotosensible, el cual atraía un tóner en polvo que luego se transfería al papel y se fijaba con calor. Eran extremadamente rápidas y producían impresiones de alta calidad.</p>
+
+        <h4>Altavoces PC Speaker (interno)</h4>
+        <p>El <strong>PC Speaker</strong> era un pequeño altavoz interno, integrado en el chasis del ordenador. No servía para reproducir música de alta fidelidad, sino que se utilizaba para emitir sonidos básicos como pitidos de alerta, errores o ruidos sencillos de videojuegos.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">💾</span> Almacenamiento y Comunicación</h3>
+
+        <h4>Disquetes de 5.25 y 3.5 pulgadas</h4>
+        <p>Los <strong>disquetes de 5.25 pulgadas</strong> eran el medio de almacenamiento portátil dominante a principios de la década. Con el tiempo, fueron reemplazados por los más pequeños y robustos <strong>disquetes de 3.5 pulgadas</strong>, que tenían una carcasa de plástico rígido y mayor capacidad (1.44 MB).</p>
+
+        <h4>Módems de conexión telefónica (dial-up)</h4>
+        <p>Los <strong>módems</strong> se hicieron populares, permitiendo que las computadoras se comunicaran entre sí a través de las líneas telefónicas. Funcionaban convirtiendo las señales digitales de la computadora en señales de audio analógicas (y viceversa). Su velocidad se medía en baudios (bits por segundo), y las velocidades típicas eran de 300 a 2400 bps, lo que hacía que las conexiones a Internet fueran extremadamente lentas.</p>
+
+        <h4>Cintas de backup (DC2000, QIC)</h4>
+        <p>Las <strong>cintas de backup</strong> seguían siendo la opción preferida para copias de seguridad de grandes volúmenes de datos. Los formatos como <strong>DC2000</strong> y <strong>QIC (Quarter-Inch Cartridge)</strong> permitían a las empresas y a los usuarios domésticos guardar información de forma eficiente y económica.</p>
+
+        <h4>Discos duros externos SCSI</h4>
+        <p>Los <strong>discos duros externos SCSI (Small Computer System Interface)</strong> permitían a los usuarios aumentar su capacidad de almacenamiento sin abrir el ordenador. La interfaz SCSI era un estándar para conectar múltiples periféricos a la computadora, ofreciendo velocidades de transferencia más rápidas que otras interfaces de la época.</p>
+        
+        <div class="footer"></div>
+    </div>
+
+    <div class="page numbered-page">
+        <div class="header">Evolución de los Periféricos</div>
+        
+        <h2 id="decade-1990">Década de 1990</h2>
+        <p>La década de 1990 fue testigo de la explosión de Internet y la multimedia. Los periféricos se volvieron más especializados y se mejoró la conectividad entre ellos, estandarizando interfaces como los puertos PS/2 y USB. El CD-ROM se convirtió en el medio de almacenamiento dominante, mientras que los gráficos y el sonido en los PC alcanzaron nuevos niveles.</p>
+        <ul>
+            <li><strong>Entrada:</strong> Teclados y ratones PS/2, micrófonos para tarjetas de sonido, cámaras web (los primeros modelos), tabletas digitalizadoras, gamepads y volantes para juegos, lápices ópticos.</li>
+            <li><strong>Salida:</strong> Monitores CRT con resoluciones SVGA, altavoces estéreo y con subwoofer, proyectores (los primeros modelos portátiles), auriculares con cable.</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> CD-ROM, CD-R y CD-RW, Zip Drive y discos Jaz, discos duros externos con conexiones Paralelas y SCSI, tarjeta de red Ethernet, conmutadores y concentradores (hubs).</li>
+        </ul>
+        
+        <hr>
+
+        <h3><span class="emoji">⌨️</span> Periféricos de Entrada</h3>
+
+        <h4>Teclados y ratones PS/2</h4>
+        <p>Los puertos <strong>PS/2</strong> se introdujeron a finales de los 80, pero se convirtieron en el estándar para conectar teclados y ratones en los <strong>PC</strong> durante los 90. A diferencia de los anteriores conectores DIN, los PS/2 eran más pequeños y codificados por color (verde para el ratón y morado para el teclado), lo que facilitaba su instalación.</p>
+
+        <h4>Micrófonos para tarjetas de sonido</h4>
+        <p>Con la llegada de las <strong>tarjetas de sonido</strong> como la popular Sound Blaster, los ordenadores empezaron a ser capaces de grabar y reproducir audio digital. Esto hizo que los <strong>micrófonos</strong> se volvieran periféricos comunes, utilizados para grabar voz, música y para aplicaciones de voz sobre IP (VoIP), que comenzaban a surgir.</p>
+
+        <h4>Cámaras web (los primeros modelos)</h4>
+        <p>Las <strong>cámaras web</strong> hicieron su debut en los 90, aunque sus primeros modelos eran de baja resolución y a menudo no captaban video de forma fluida. Se popularizaron con el auge del Internet y las primeras aplicaciones de videoconferencia como <strong>CU-SeeMe</strong>.</p>
+
+        <h4>Tabletas digitalizadoras</h4>
+        <p>Las <strong>tabletas digitalizadoras</strong> se hicieron más accesibles para el público. Usando un lápiz especial sobre una superficie plana, permitían a los artistas y diseñadores crear gráficos digitales con una precisión mucho mayor que la que se podía lograr con un ratón.</p>
+
+        <h4>Gamepads y volantes para juegos</h4>
+        <p>La industria de los videojuegos para PC explotó en los 90. Con ello, los <strong>gamepads</strong> (similares a los de las consolas) y los <strong>volantes para juegos</strong> se convirtieron en periféricos esenciales para los entusiastas, ofreciendo una experiencia más inmersiva en géneros como los juegos de carreras y simulación.</p>
+
+        <h4>Lápices ópticos</h4>
+        <p>Los <strong>lápices ópticos</strong> eran dispositivos que permitían a los usuarios interactuar con la pantalla de un monitor <strong>CRT</strong> tocándola directamente. Se usaban en aplicaciones de dibujo y diseño, pero su funcionalidad estaba limitada por la tecnología de pantalla de la época.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">🖥️</span> Periféricos de Salida</h3>
+        
+        <h4>Monitores CRT con resoluciones SVGA</h4>
+        <p>Los monitores <strong>CRT</strong> de los 90 alcanzaron su máximo rendimiento. Los estándares de <strong>video SVGA (Super Video Graphics Array)</strong> ofrecieron resoluciones mucho más altas (800x600 y 1024x768 píxeles) y una paleta de colores de hasta 16 millones, lo que hizo posible los gráficos avanzados y el diseño profesional.</p>
+
+        <h4>Altavoces estéreo y con subwoofer</h4>
+        <p>La mejora en las tarjetas de sonido propició la aparición de <strong>altavoces externos</strong> para PC. Los sistemas con sonido <strong>estéreo</strong> y los que incluían un <strong>subwoofer</strong> se hicieron muy populares, ofreciendo una mejor calidad de audio para juegos, música y películas.</p>
+
+        <h4>Proyectores (los primeros modelos portátiles)</h4>
+        <p>Los primeros <strong>proyectores</strong> portátiles para PC aparecieron en esta década. Aunque eran caros y voluminosos, permitían a los profesionales realizar presentaciones en grandes pantallas, lo que fue un avance significativo para el ámbito empresarial y educativo.</p>
+
+        <h4>Auriculares con cable</h4>
+        <p>El uso de <strong>auriculares con cable</strong> se hizo común, especialmente para disfrutar de audio sin molestar a los demás o para tener una experiencia de sonido más privada, por ejemplo en juegos.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">💾</span> Almacenamiento y Comunicación</h3>
+
+        <h4>CD-ROM, CD-R y CD-RW</h4>
+        <p>El <strong>CD-ROM (Compact Disc - Read-Only Memory)</strong> se convirtió en el principal medio para distribuir software, juegos y enciclopedias multimedia, gracias a su gran capacidad de almacenamiento (650-700 MB). Posteriormente, llegaron los <strong>CD-R (grabables)</strong> y <strong>CD-RW (regrabables)</strong>, que permitieron a los usuarios grabar su propia información.</p>
+
+        <h4>Zip Drive y discos Jaz</h4>
+        <p>Ante la necesidad de más capacidad que la ofrecida por los disquetes, surgieron soluciones como el <strong>Zip Drive</strong> de Iomega. Usaba discos que podían almacenar hasta 100 MB, y más tarde 250 MB. El <strong>Jaz Drive</strong>, también de Iomega, ofrecía aún más espacio, con discos de 1 GB y 2 GB, lo que lo hacía popular para el almacenamiento de archivos grandes de video o diseño.</p>
+
+        <h4>Discos duros externos con conexiones Paralelas y SCSI</h4>
+        <p>Los <strong>discos duros externos</strong> siguieron evolucionando. Las conexiones <strong>Paralelas</strong> eran las más comunes para el usuario doméstico, mientras que las <strong>SCSI</strong> seguían siendo preferidas en entornos profesionales por su velocidad y la capacidad de encadenar varios dispositivos.</p>
+
+        <h4>Tarjeta de red Ethernet</h4>
+        <p>Las <strong>tarjetas de red Ethernet</strong> se convirtieron en un componente esencial para conectar ordenadores a una red local (**LAN**), lo que permitió la comunicación entre PCs en oficinas y hogares, así como el juego en red.</p>
+
+        <h4>Conmutadores y concentradores (hubs)</h4>
+        <p>Los <strong>concentradores (hubs)</strong> y <strong>conmutadores (switches)</strong> fueron los dispositivos clave para construir las redes de computadoras de la década. Un <strong>hub</strong> retransmitía los datos a todos los ordenadores conectados, mientras que un <strong>switch</strong> era más inteligente y enviaba los datos solo al destino correcto, lo que hacía las redes más eficientes.</p>
+        
+        <div class="footer"></div>
+    </div>
+
+    <div class="page numbered-page">
+        <div class="header">Evolución de los Periféricos</div>
+
+        <h2 id="decade-2000">Década de 2000</h2>
+        <p>La década de 2000 estuvo marcada por la consolidación del internet de alta velocidad y la miniaturización de la tecnología. Los monitores CRT fueron reemplazados por las pantallas planas y los periféricos inalámbricos se volvieron una realidad accesible. El USB se convirtió en el conector universal, impulsando la portabilidad del almacenamiento y la conectividad.</p>
+        <ul>
+            <li><strong>Entrada:</strong> Teclados y ratones inalámbricos (RF y Bluetooth), lector de huellas dactilares, controladores para consolas de videojuegos con vibración, cámaras web con mayor resolución y enfoque automático, lectores de tarjetas de memoria.</li>
+            <li><strong>Salida:</strong> Monitores LCD (pantallas planas), impresoras multifunción (impresión, escaneo y fax), altavoces 5.1 y 7.1, pantallas de plasma, proyectores de alta definición.</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> Memorias USB (pendrives), discos duros externos USB 2.0, unidades de DVD-ROM y DVD-RW, Blu-ray, tarjetas de red Wi-Fi.</li>
+        </ul>
+
+        <hr>
+
+        <h3><span class="emoji">⌨️</span> Periféricos de Entrada</h3>
+
+        <h4>Teclados y ratones inalámbricos (RF y Bluetooth)</h4>
+        <p>Un teclado inalámbrico permite al usuario comunicarse con computadoras, tabletas o portátiles mediante radiofrecuencia (RF), como wifi y Bluetooth , o tecnología infrarroja (IR). Los teclados inalámbricos disponibles en el mercado suelen incluir un ratón inalámbrico .</p>
+        <p>Los teclados inalámbricos basados en tecnología infrarroja utilizan ondas de luz para transmitir señales a otros dispositivos compatibles con infrarrojos. En el caso de la tecnología de radiofrecuencia, un teclado inalámbrico se comunica mediante señales que van desde los 27 MHz hasta los 2,4 GHz. La mayoría de los teclados inalámbricos actuales funcionan en la frecuencia de radio de 2,4 GHz. Bluetooth es otra tecnología ampliamente utilizada en teclados inalámbricos. Estos dispositivos se conectan y se comunican con su dispositivo principal mediante el protocolo Bluetooth.</p>
+        <p>Un teclado inalámbrico se puede conectar mediante tecnología RF con dos partes: un transmisor y un receptor. El transmisor de radio se encuentra dentro del teclado inalámbrico. El receptor de radio se conecta a un puerto de teclado o a un puerto USB . Una vez conectados, el ordenador reconoce el teclado y el ratón como si estuvieran conectados por cable</p>
+        
+        <h4>Lector de huellas dactilares</h4>
+        <p>Los <strong>lectores de huellas dactilares</strong> se popularizaron en esta década, ofreciendo una nueva capa de seguridad biométrica. Estos dispositivos, a menudo integrados en ordenadores portátiles o teclados, permitían a los usuarios iniciar sesión en sus equipos sin necesidad de contraseñas, escaneando la huella digital para verificar su identidad.</p>
+
+        <h4>Controladores para consolas de videojuegos con vibración</h4>
+        <p>La tecnología de vibración en los controladores de videojuegos, ya presente en la década anterior, se convirtió en un estándar. Controladores como el DualShock de PlayStation y el de Xbox ofrecían retroalimentación háptica (sensación táctil) que mejoraba la inmersión en los juegos, haciéndolos sentir más realistas al simular impactos, explosiones o movimientos del vehículo.</p>
+
+        <h4>Cámaras web con mayor resolución y enfoque automático</h4>
+        <p>Las <strong>cámaras web</strong> dejaron de ser un periférico de nicho para convertirse en un accesorio esencial, impulsado por el auge del chat de video con servicios como MSN Messenger y Skype. Los modelos de esta década ofrecían resoluciones más altas, mejor calidad de imagen y la función de enfoque automático, que permitía una imagen más clara y definida.</p>
+
+        <h4>Lectores de tarjetas de memoria</h4>
+        <p>La proliferación de cámaras digitales y otros dispositivos portátiles llevó a la popularización de los <strong>lectores de tarjetas de memoria</strong>. Estos periféricos, a menudo integrados en el chasis del ordenador, permitían transferir fotos, videos y otros archivos desde tarjetas de memoria (como SD, CompactFlash y Memory Stick) directamente a la computadora sin necesidad de cables.</p>
+
+        <hr>
+
+        <h3><span class="emoji">🖥️</span> Periféricos de Salida</h3>
+        
+        <h4>Monitores LCD (pantallas planas)</h4>
+        <p>Los voluminosos monitores CRT comenzaron a ser reemplazados por los delgados y eficientes <strong>monitores LCD (Liquid Crystal Display)</strong>. Las pantallas planas consumían menos energía, ocupaban mucho menos espacio en el escritorio y ofrecían una imagen nítida, aunque los primeros modelos podían tener problemas de ángulos de visión y tiempo de respuesta.</p>
+
+        <h4>Impresoras multifunción (impresión, escaneo y fax)</h4>
+        <p>Las impresoras dejaron de ser solo impresoras. Las <strong>impresoras multifunción</strong> combinaban varias funciones en un solo dispositivo, incluyendo la capacidad de imprimir, escanear documentos y, a menudo, enviar faxes. Esto ahorraba espacio y reducía costos para oficinas y hogares.</p>
+
+        <h4>Altavoces 5.1 y 7.1</h4>
+        <p>El auge del cine en casa y los juegos con audio posicional llevó a la popularización de los <strong>sistemas de sonido 5.1 y 7.1</strong>. Estos sistemas de altavoces, que incluían múltiples altavoces (frontales, traseros y un subwoofer), ofrecían un sonido envolvente que hacía que los usuarios sintieran que el audio venía de todas las direcciones.</p>
+
+        <h4>Pantallas de plasma</h4>
+        <p>Las <strong>pantallas de plasma</strong> se convirtieron en una opción de alta gama para televisores y monitores. Ofrecían negros más profundos, colores más vivos y un mejor contraste que los LCD de la época, aunque eran más propensas a la retención de imagen y consumían más energía.</p>
+
+        <h4>Proyectores de alta definición</h4>
+        <p>Los <strong>proyectores</strong> se hicieron más asequibles y capaces. Los modelos de alta definición (HD) se volvieron populares para presentaciones profesionales, cine en casa y eventos, permitiendo proyectar imágenes nítidas y detalladas en grandes superficies.</p>
+
+        <div class="footer"></div>
+    </div>
+
+    <div class="page numbered-page">
+        <div class="header">Evolución de los Periféricos</div>
+        
+        <h2 id="decade-2010">Década de 2010</h2>
+        <p>Esta década vio la consolidación de la movilidad, el cloud computing y la experiencia del usuario. La interacción se simplificó con pantallas táctiles, y el auge del "gaming" y la creación de contenido impulsó la demanda de periféricos de alto rendimiento. El almacenamiento en estado sólido se hizo la norma, eliminando las limitaciones de velocidad de los discos duros mecánicos.</p>
+        <ul>
+            <li><strong>Entrada:</strong> Pantallas táctiles y multitáctiles, ratones gaming de alta precisión (DPI ajustable), teclados mecánicos, cámaras de realidad virtual (Oculus Rift, HTC Vive), controladores con sensores de movimiento (Kinect), micrófonos USB de estudio.</li>
+            <li><strong>Salida:</strong> Monitores LED y OLED, monitores con resoluciones 4K, impresoras 3D (los primeros modelos asequibles), auriculares y altavoces inalámbricos Bluetooth.</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> SSD (Unidades de estado sólido), discos duros externos con USB 3.0, tarjetas de memoria de alta capacidad (MicroSD, SDXC), dispositivos de almacenamiento en red (NAS), dispositivos de streaming.</li>
+        </ul>
+        
+        <hr>
+
+        <h3><span class="emoji">⌨️</span> Periféricos de Entrada</h3>
+        
+        <h4>Pantallas táctiles y multitáctiles</h4>
+        <p>Las <strong>pantallas táctiles</strong> se convirtieron en la interfaz principal de smartphones y tablets, y se popularizaron en ordenadores. La tecnología <strong>multitáctil</strong> permitió gestos más complejos, como el pellizco para hacer zoom o el deslizamiento con varios dedos. Esto marcó un cambio fundamental en la interacción con la tecnología, alejándose de los periféricos tradicionales.</p>
+
+        <h4>Ratones gaming de alta precisión (DPI ajustable)</h4>
+        <p>La industria del videojuego competitivo impulsó la evolución de los ratones. Los <strong>ratones gaming</strong> de esta década se caracterizaban por su alta precisión y la capacidad de ajustar el DPI (Dots Per Inch), lo que permitía a los jugadores personalizar la sensibilidad del cursor para diferentes tipos de juego. También incorporaban botones programables y diseños ergonómicos.</p>
+
+        <h4>Teclados mecánicos</h4>
+        <p>Tras la popularidad de los teclados de membrana en las décadas anteriores, los <strong>teclados mecánicos</strong> resurgieron con fuerza, especialmente en el ámbito del gaming y la escritura. Sus interruptores individuales ofrecían una respuesta táctil superior, una mayor durabilidad y la posibilidad de personalización.</p>
+
+        <h4>Cámaras de realidad virtual (Oculus Rift, HTC Vive)</h4>
+        <p>La realidad virtual (VR) dejó de ser un concepto de ciencia ficción para convertirse en una realidad comercial con la llegada de dispositivos como el <strong>Oculus Rift</strong> y el <strong>HTC Vive</strong>. Estos cascos de VR, a menudo con cámaras y sensores externos, permitían a los usuarios sumergirse en entornos virtuales y controlar su perspectiva con los movimientos de la cabeza.</p>
+
+        <h4>Controladores con sensores de movimiento (Kinect)</h4>
+        <p>Los <strong>controladores con sensores de movimiento</strong> como el Microsoft Kinect para Xbox 360 y One revolucionaron la forma en que jugamos. El Kinect permitía a los jugadores controlar los juegos con todo su cuerpo, sin necesidad de un controlador físico, utilizando una cámara con sensor de profundidad.</p>
+
+        <h4>Micrófonos USB de estudio</h4>
+        <p>La creación de contenido digital se popularizó enormemente en esta década. Los <strong>micrófonos USB de estudio</strong> hicieron que la grabación de audio de alta calidad, antes exclusiva de los profesionales, fuera accesible para cualquier persona. Eran ideales para podcasts, streaming en vivo y grabación de voz.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">🖥️</span> Periféricos de Salida</h3>
+        
+        <h4>Monitores LED y OLED</h4>
+        <p>Los monitores LCD evolucionaron a la tecnología <strong>LED (Light-Emitting Diode)</strong>, que ofrecía un mejor contraste, un consumo de energía más bajo y una retroiluminación más uniforme. Más tarde, los monitores <strong>OLED (Organic Light-Emitting Diode)</strong> se introdujeron en el mercado, proporcionando negros perfectos, colores vibrantes y tiempos de respuesta ultrarrápidos, aunque a un costo más elevado.</p>
+
+        <h4>Monitores con resoluciones 4K</h4>
+        <p>La resolución <strong>4K (3840 x 2160 píxeles)</strong> se convirtió en un nuevo estándar para los monitores de alta gama. Esta tecnología proporcionaba una nitidez y un nivel de detalle cuatro veces mayor que el Full HD (1080p), mejorando la experiencia en videojuegos, edición de video y consumo de contenido multimedia.</p>
+
+        <h4>Impresoras 3D (los primeros modelos asequibles)</h4>
+        <p>Las <strong>impresoras 3D</strong> pasaron de ser máquinas industriales a un periférico asequible para los entusiastas y las pequeñas empresas. Estos dispositivos permitían a los usuarios crear objetos tridimensionales a partir de un diseño digital, con aplicaciones en el prototipado, la fabricación de maquetas y la creación de figuras personalizadas.</p>
+
+        <h4>Auriculares y altavoces inalámbricos Bluetooth</h4>
+        <p>La conectividad <strong>Bluetooth</strong> se estandarizó en casi todos los dispositivos, lo que llevó a una explosión en el mercado de <strong>auriculares y altavoces inalámbricos</strong>. Esto ofreció una mayor libertad de movimiento y comodidad al eliminar la necesidad de cables.</p>
+        
+        <hr>
+
+        <h3><span class="emoji">💾</span> Almacenamiento y Comunicación</h3>
+
+        <h4>SSD (Unidades de estado sólido)</h4>
+        <p>Las <strong>SSD (Solid-State Drive)</strong> se hicieron cada vez más comunes en ordenadores de escritorio y portátiles. A diferencia de los discos duros tradicionales (HDD) con partes móviles, las SSD usan memoria flash, lo que las hace mucho más rápidas en la lectura y escritura de datos, silenciosas y resistentes a golpes.</p>
+
+        <h4>Discos duros externos con USB 3.0</h4>
+        <p>El estándar <strong>USB 3.0</strong> ofreció un gran salto en la velocidad de transferencia de datos, con hasta 5 Gbps. Esto hizo que los <strong>discos duros externos</strong> fueran más eficientes para realizar copias de seguridad de grandes bibliotecas de fotos y videos en un tiempo mucho menor.</p>
+
+        <h4>Tarjetas de memoria de alta capacidad (MicroSD, SDXC)</h4>
+        <p>Las <strong>tarjetas de memoria</strong> se hicieron más pequeñas y con una capacidad mucho mayor. Formatos como <strong>MicroSD</strong> y <strong>SDXC (eXtended Capacity)</strong> permitieron a los usuarios almacenar terabytes de datos en dispositivos del tamaño de una uña, lo cual fue crucial para los smartphones y las cámaras digitales.</p>
+
+        <h4>Dispositivos de almacenamiento en red (NAS)</h4>
+        <p>Los <strong>NAS (Network Attached Storage)</strong> se popularizaron en los hogares y las pequeñas oficinas. Estos dispositivos permitían a los usuarios crear su propia "nube" personal para almacenar archivos y acceder a ellos desde cualquier dispositivo conectado a la misma red.</p>
+
+        <h4>Dispositivos de streaming</h4>
+        <p>El <strong>streaming</strong> se convirtió en el método principal para consumir contenido. Los dispositivos de streaming dedicados, como el Chromecast de Google, el Roku y el Apple TV, permitían a los usuarios transmitir contenido desde sus ordenadores o teléfonos directamente a sus televisores.</p>
+        
+        <div class="footer"></div>
+    </div>
+    
+    <div class="page numbered-page">
+        <div class="header">Evolución de los Periféricos</div>
+        
+        <h2 id="decade-2020">Década de 2020 a 2025</h2>
+        <p>En la primera mitad de la década de 2020, la evolución tecnológica se ha centrado en la inteligencia artificial, la conectividad ubicua y la inmersión. La interacción hombre-máquina es cada vez más natural y personalizable, con periféricos que responden a nuestra voz y mirada. El rendimiento y la velocidad de almacenamiento se han disparado con las nuevas interfaces, y la realidad virtual y aumentada se han vuelto más sofisticadas.</p>
+        <ul>
+            <li><strong>Entrada:</strong> Controladores de seguimiento ocular, periféricos de control por voz (asistentes virtuales como Amazon Echo, Google Home), teclados y ratones modulares y ergonómicos, controladores de realidad virtual con seguimiento de manos.</li>
+            <li><strong>Salida:</strong> Pantallas OLED y Mini-LED, monitores con altas tasas de refresco (144 Hz, 240 Hz, etc.), impresoras 3D con impresión por resina y metal, auriculares con sonido espacial, proyectores de tiro ultracorto.</li>
+            <li><strong>Almacenamiento y Comunicación:</strong> SSD NVMe M.2, discos duros con tecnología HAMR (Heat-Assisted Magnetic Recording), tarjetas de red Wi-Fi 6 y Wi-Fi 6E, dispositivos de comunicación cuántica (prototipos), Hubs y cables Thunderbolt 4.</li>
+        </ul>
+
+        <hr>
+
+        <h3><span class="emoji">⌨️</span> Periféricos de Entrada</h3>
+
+        <h4>Controladores de seguimiento ocular</h4>
+        <p>Los <strong>controladores de seguimiento ocular</strong> se han integrado en dispositivos de realidad virtual y ordenadores de alta gama. Esta tecnología utiliza sensores infrarrojos para detectar la dirección de la mirada del usuario. Esto permite una interacción más natural, como seleccionar un objeto en la pantalla con solo mirarlo, o mejorar la experiencia de realidad virtual al renderizar con mayor detalle solo lo que el usuario está viendo.</p>
+
+        <h4>Periféricos de control por voz (asistentes virtuales como Amazon Echo, Google Home)</h4>
+        <p>Los <strong>asistentes virtuales</strong> como Amazon Echo y Google Home se han convertido en una parte fundamental de muchos hogares. Estos dispositivos con control por voz permiten a los usuarios interactuar con otros dispositivos inteligentes, hacer preguntas, reproducir música o controlar electrodomésticos, simplemente usando su voz como método de entrada principal.</p>
+
+        <h4>Teclados y ratones modulares y ergonómicos</h4>
+        <p>La ergonomía y la personalización han ganado protagonismo. Los <strong>teclados y ratones modulares</strong> permiten a los usuarios cambiar y adaptar los componentes para satisfacer sus necesidades específicas. Los diseños <strong>ergonómicos</strong> buscan minimizar el esfuerzo y la tensión en las manos, muñecas y brazos, previniendo lesiones relacionadas con el uso prolongado.</p>
+
+        <h4>Controladores de realidad virtual con seguimiento de manos</h4>
+        <p>La realidad virtual ha evolucionado para incluir el seguimiento de manos. Nuevos controladores, como los de los auriculares Meta Quest, pueden rastrear el movimiento de las manos y los dedos del usuario con gran precisión, permitiendo una interacción más inmersiva y natural en entornos virtuales, sin la necesidad de controladores físicos en la mano.</p>
+
+        <hr>
+
+        <h3><span class="emoji">🖥️</span> Periféricos de Salida</h3>
+
+        <h4>Pantallas OLED y Mini-LED</h4>
+        <p>Las <strong>pantallas OLED y Mini-LED</strong> han alcanzado la madurez. Los monitores y televisores OLED (Organic Light-Emitting Diode) ofrecen un contraste infinito, negros perfectos y colores vibrantes al iluminar cada píxel de forma individual. Los Mini-LED, por su parte, mejoran significativamente la tecnología LED tradicional al usar miles de pequeños LED para una retroiluminación más precisa, lo que da como resultado un mayor brillo y contraste.</p>
+
+        <h4>Monitores con altas tasas de refresco (144 Hz, 240 Hz, etc.)</h4>
+        <p>Los <strong>monitores con altas tasas de refresco</strong> se han vuelto esenciales para los gamers profesionales y los entusiastas. Estas pantallas son capaces de refrescar la imagen más de 144 veces por segundo, lo que resulta en una experiencia visual mucho más fluida, reduciendo el desenfoque de movimiento y mejorando la capacidad de respuesta en los videojuegos.</p>
+
+        <h4>Impresoras 3D con impresión por resina y metal</h4>
+        <p>La tecnología de <strong>impresión 3D</strong> ha avanzado notablemente. Además de los modelos de filamento plástico, las impresoras de resina (SLA/DLP) ofrecen una precisión y detalle extraordinarios, perfectos para maquetas o piezas pequeñas. Las impresoras de metal, aunque costosas, permiten crear piezas funcionales y prototipos industriales.</p>
+
+        <h4>Auriculares con sonido espacial</h4>
+        <p>El <strong>sonido espacial</strong> es una tecnología de audio avanzada que simula un entorno tridimensional para los auriculares. Utilizando algoritmos, esta tecnología hace que los sonidos parezcan venir de todas las direcciones, lo que mejora la inmersión en juegos, películas y música, superando el sonido estéreo tradicional.</p>
+
+        <h4>Proyectores de tiro ultracorto</h4>
+        <p>Los <strong>proyectores de tiro ultracorto</strong> han resuelto el problema de la instalación y el espacio. Estos proyectores pueden mostrar una imagen grande y nítida en una pared, incluso estando a solo unos centímetros de distancia, lo que los hace ideales para espacios pequeños y elimina la necesidad de montar el proyector en el techo o en la parte posterior de la habitación.</p>
+
+        <hr>
+
+        <h3><span class="emoji">💾</span> Almacenamiento y Comunicación</h3>
+
+        <h4>SSD NVMe M.2</h4>
+        <p>Las <strong>SSD NVMe M.2</strong> se han convertido en el estándar de alta velocidad. A diferencia de las SSD SATA, las NVMe (Non-Volatile Memory Express) utilizan la interfaz PCIe de la placa base, lo que permite velocidades de lectura y escritura hasta 10 veces más rápidas, mejorando drásticamente los tiempos de arranque y carga de programas.</p>
+
+        <h4>Discos duros con tecnología HAMR (Heat-Assisted Magnetic Recording)</h4>
+        <p>Para seguir aumentando la capacidad de almacenamiento de los discos duros mecánicos, se ha desarrollado la tecnología <strong>HAMR</strong>. Esta técnica utiliza un láser para calentar brevemente una pequeña parte del plato del disco, permitiendo que los datos se escriban con una mayor densidad, lo que aumenta la capacidad a niveles de decenas de terabytes.</p>
+
+        <h4>Tarjetas de red Wi-Fi 6 y Wi-Fi 6E</h4>
+        <p>La conectividad inalámbrica ha mejorado con <strong>Wi-Fi 6</strong> y su extensión <strong>Wi-Fi 6E</strong>. Estas nuevas generaciones de Wi-Fi ofrecen velocidades más altas, menor latencia y un rendimiento superior en entornos con muchos dispositivos conectados. Wi-Fi 6E añade el uso de la banda de 6 GHz, lo que reduce la congestión de la red y mejora aún más el rendimiento.</p>
+
+        <h4>Dispositivos de comunicación cuántica (prototipos)</h4>
+        <p>Aunque todavía en fase de investigación y desarrollo, los <strong>dispositivos de comunicación cuántica</strong> están emergiendo como una tecnología del futuro. Estos prototipos utilizan las propiedades de la física cuántica para transmitir información de forma ultrasegura, lo que podría revolucionar la criptografía y la comunicación.</p>
+
+        <h4>Hubs y cables Thunderbolt 4</h4>
+        <p>La interfaz <strong>Thunderbolt 4</strong> se ha establecido como el estándar para la conectividad de alta gama. Un solo cable Thunderbolt 4 puede transmitir datos a 40 Gbps, cargar dispositivos y conectar hasta dos monitores 4K de forma simultánea, lo que simplifica la configuración de periféricos y estaciones de trabajo.</p>
+        
+        <div class="footer"></div>
+    </div>
+
+    <div class="page numbered-page" id="image-gallery">
+        <div class="header">Evolución de los Periféricos</div>
+        <hr>
+        <h2>Galería de Imágenes</h2>
+        <p>A continuación, se presenta una selección de imágenes que ilustran la evolución de los periféricos de computación a lo largo de las décadas.</p>
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="https://www.google.com/imgres?q=tarjeta%20perforada%20de%20los%2070&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F7f%2FPunch_card_Fortran_Uni_Stuttgart_%25282%2529.jpg&imgrefurl=https%3A%2F%2Fhistoriasinventos.wordpress.com%2F2015%2F08%2F01%2Fel-origen-de-las-tarjetas-perforadas%2F&docid=PfwIoNauQ3OhgM&tbnid=b4Hr2KOiSW1vlM&vet=12ahUKEwj5o6LM6d2PAxXOO7kGHRB-Ns8QM3oECB4QAA..i&w=3071&h=1388&hcb=2&ved=2ahUKEwj5o6LM6d2PAxXOO7kGHRB-Ns8QM3oECB4QAA" alt="Imagen de una tarjeta perforada de los años 70">
+                <p>Tarjeta Perforada y lectora de cinta de los años 70.</p>
+            </div>
+            <div class="image-container">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/14694843205088391003_0" alt="Imagen de un mouse de bola y teclado de PC/AT de los 80">
+                <p>Mouse de bola y teclado de PC/AT de la década de 1980.</p>
+            </div>
+            <div class="image-container">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/11650998947973049041_0" alt="Imagen de un monitor CRT y una unidad de CD-ROM de los 90">
+                <p>Monitor CRT con unidad de CD-ROM, un icono de los 90.</p>
+            </div>
+            <div class="image-container">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/8308415693818689480_0" alt="Imagen de una SSD M.2 NVMe y un hub Thunderbolt de la década de 2020">
+                <p>SSD M.2 NVMe y un hub Thunderbolt 4, periféricos modernos.</p>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <div class="page numbered-page" id="bibliography">
+        <div class="header">Evolución de los Periféricos</div>
+        <hr>
+        <h2>Citas Bibliográficas</h2>
+        <ul class="sources">
+            <li><strong>Museo de Historia de la Computación (Computer History Museum):</strong> <a href="https://www.computerhistory.org/" target="_blank">https://www.computerhistory.org/</a></li>
+            <li><strong>Enciclopedia Británica (Encyclopedia Britannica):</strong> <a href="https://www.britannica.com/" target="_blank">https://www.britannica.com/</a></li>
+            <li><strong>Universidad de Standford (Stanford University):</strong> <a href="https://cs.stanford.edu/" target="_blank">https://cs.stanford.edu/</a></li>
+            <li><strong>Smithsonian National Museum of American History:</strong> <a href="https://americanhistory.si.edu/" target="_blank">https://americanhistory.si.edu/</a></li>
+            <li><strong>Wikipedia:</strong> <a href="https://es.wikipedia.org/" target="_blank">https://es.wikipedia.org/</a></li>
+        </ul>
+        <div class="footer"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
