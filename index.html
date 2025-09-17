@@ -47,24 +47,59 @@
             margin-bottom: 20px;
         }
 
-        .subtitle {
-            font-size: 1.2em;
-            color: #7f8c8d;
-            margin-bottom: 30px;
+        .image-container {
+            margin: 20px auto;
+            max-width: 600px;
         }
 
-        .content {
-            text-align: justify;
-            margin-bottom: 30px;
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px var(--shadow-color);
         }
-        
-        .author {
+
+        .info-section p {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1em;
             color: #7f8c8d;
-            margin-top: 20px;
+            margin: 10px 0;
         }
 
+        .index-section {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .index-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6em;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--link-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .index-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .index-section li {
+            margin-bottom: 10px;
+        }
+
+        .index-section a {
+            text-decoration: none;
+            color: var(--link-color);
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .index-section a:hover {
+            color: var(--accent-color);
+        }
+        
         .navigation {
             margin-top: 30px;
         }
@@ -89,17 +124,27 @@
 
 <div class="container">
     <h1 class="title">La Historia de los Periféricos</h1>
-    <p class="subtitle">Explora el fascinante mundo de la tecnología</p>
     
-    <div class="content">
-        <p>Los periféricos son dispositivos auxiliares e independientes que se conectan a una unidad central de procesamiento de la computadora. A través de ellos, se puede interactuar con el sistema, tanto enviando información (periféricos de entrada) como recibiendo resultados (periféricos de salida). Con el tiempo, estos dispositivos han evolucionado de manera sorprendente, volviéndose más pequeños, rápidos y multifuncionales. Este proyecto explora la evolución de los periféricos más importantes de la historia de la computación.</p>
+    <div class="image-container">
+        <img src="https://isfdyt59-bue.infd.edu.ar/sitio/wp-content/uploads/2018/11/Instituto59perfil-sitio-web-2-e1542289013427.jpg" alt="Imagen del Instituto">
     </div>
-    
-    <p class="author">Autor: Juan Pablo Tomé</p>
-    <p class="author">Profesor: Darío Dell'Arciprete</p>
 
-    <div class="navigation">
-        <a href="pagina2.html">Comenzar</a>
+    <div class="info-section">
+        <p>Alumno: Juan Pablo Tomé</p>
+        <p>Profesor: Darío Dell'Arciprete</p>
+        <p>Carrera: Tecnicatura Superior en Análisis de Sistemas e Información</p>
+        <p>Fecha: septiembre 2025</p>
+    </div>
+
+    <div class="index-section">
+        <h2>Índice por Décadas</h2>
+        <ul>
+            <li><a href="index.html">Carátula e Introducción</a></li>
+            <li><a href="pagina2.html">Décadas de 1970 y 1980</a></li>
+            <li><a href="pagina3.html">Décadas de 1990 y 2000</a></li>
+            <li><a href="pagina4.html">Décadas de 2010 y 2020</a></li>
+            <li><a href="pagina5.html">Galería de Imágenes y Fuentes</a></li>
+        </ul>
     </div>
 </div>
 
