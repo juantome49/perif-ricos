@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería y Fuentes</title>
+    <title>Galería, Glosario y Fuentes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
@@ -49,6 +49,25 @@
             text-align: center;
         }
 
+        /* Glosario */
+        .glossary {
+            column-count: 2;
+            column-gap: 40px;
+            text-align: justify;
+        }
+
+        .glossary dt {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 10px;
+        }
+
+        .glossary dd {
+            margin-left: 0;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+
         /* Galería de Imágenes */
         .image-gallery {
             display: grid;
@@ -73,13 +92,18 @@
         }
 
         /* Video de YouTube */
+        .video-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
         .video-container {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
             height: 0;
             overflow: hidden;
-            margin: 20px 0;
             border-radius: 12px;
             box-shadow: 0 5px 15px var(--shadow-color);
         }
@@ -145,31 +169,109 @@
     
     <div class="image-gallery">
         <div class="gallery-item">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/17818274196143527581" alt="Tarjeta perforada de la década de 1970">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/1342281077232228856" alt="Tarjeta perforada de la década de 1970">
         </div>
         <div class="gallery-item">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/12093223075252876101" alt="Teclado y ratón de la década de 1980">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/7695560478484722692" alt="Ratón de bola de la década de 1980">
         </div>
         <div class="gallery-item">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/9343753738128330776" alt="CD-ROM y disquetes de la década de 1990">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/10861288768414533083" alt="Disquetes y CD-ROM de la década de 1990">
         </div>
         <div class="gallery-item">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/10903823467475850937" alt="Monitor LCD de la década de 2000">
+            <img src="
+
+http://googleusercontent.com/image_collection/image_retrieval/13751415681505573598
+" alt="Monitor CRT de la década de 2000">
         </div>
         <div class="gallery-item">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/11648981267433299946" alt="SSD y memorias USB modernas">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/13173533962232285859" alt="Memorias USB y SSD modernas">
         </div>
         <div class="gallery-item">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/11554625298816694386" alt="Teclados mecánicos de los años 2010">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/1799438918974060692" alt="Teclado mecánico de los años 2010">
+        </div>
+        <div class="gallery-item">
+            <img src="
+
+http://googleusercontent.com/image_collection/image_retrieval/3356239976112794822
+" alt="Impresora 3D">
+        </div>
+        <div class="gallery-item">
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/7411505340719369180" alt="Casco de realidad virtual">
         </div>
     </div>
 
-    <h2 id="video-section">Video Recomendado</h2>
-    <p style="text-align: center;">Para complementar la información, te recomiendo este video que resume la historia de los periféricos.</p>
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wD8yJnIG7gI" title="Historia y Evolución de las Computadoras y sus Generaciones" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2 id="video-section">Videos Relacionados</h2>
+    <p style="text-align: center;">Explora la historia con estos videos que complementan tu proyecto.</p>
+    
+    <div class="video-list">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/wD8yJnIG7gI" title="Historia y Evolución de las Computadoras y sus Generaciones" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/V7qg1WGSdvc" title="Evolución de los dispositivos de almacenamiento" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Mql8JufjHGo" title="La historia y tipos de Mouse - #ESimple" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
 
+    <h2 id="glossary">Glosario de Términos</h2>
+    <dl class="glossary">
+        <dt>CRT (Tubo de Rayos Catódicos)</dt>
+        <dd>Tecnología de visualización que usa un cañón de electrones para proyectar imágenes en una pantalla de fósforo. Predecesor de las pantallas planas.</dd>
+
+        <dt>DIP (Dual In-line Package)</dt>
+        <dd>Interruptores manuales usados en las primeras tarjetas de circuitos para configurar el hardware.</dd>
+
+        <dt>Matricial de Puntos</dt>
+        <dd>Tipo de impresora que crea caracteres o imágenes golpeando una cinta de tinta con pequeños pines.</dd>
+
+        <dt>Plotter</dt>
+        <dd>Dispositivo de salida que dibuja gráficos vectoriales usando plumas, ideal para planos y diagramas de ingeniería.</dd>
+
+        <dt>CGA / EGA / VGA</dt>
+        <dd>Estándares gráficos de video de la década de 1980 que determinaban la cantidad de colores y la resolución de los monitores CRT a color.</dd>
+
+        <dt>SCSI (Small Computer System Interface)</dt>
+        <dd>Interfaz paralela para conectar periféricos como discos duros externos y escáneres a una computadora, conocida por su velocidad y capacidad de encadenamiento.</dd>
+
+        <dt>PS/2</dt>
+        <dd>Tipo de puerto para conectar teclados y ratones, popular en los años 90. Reemplazó a los conectores DIN.</dd>
+
+        <dt>VoIP (Voz sobre IP)</dt>
+        <dd>Tecnología que permite la transmisión de voz a través de Internet, popularizando el uso de micrófonos.</dd>
+
+        <dt>CD-ROM / CD-R / CD-RW</dt>
+        <dd>Discos ópticos para el almacenamiento de datos. **ROM** es solo lectura, **R** es grabable una vez y **RW** es regrabable.</dd>
+
+        <dt>Zip Drive</dt>
+        <dd>Unidad de disco extraíble lanzada por Iomega, que ofrecía mayor capacidad que los disquetes estándar.</dd>
+
+        <dt>Hub / Switch</dt>
+        <dd>Dispositivos de red. Un **hub** retransmite datos a todos los puertos, mientras que un **switch** los dirige solo al destino correcto, optimizando el rendimiento de la red.</dd>
+
+        <dt>LCD (Liquid Crystal Display)</dt>
+        <dd>Tecnología de pantalla plana que utiliza cristales líquidos para producir imágenes, reemplazando a los voluminosos monitores CRT.</dd>
+
+        <dt>Altavoces 5.1 y 7.1</dt>
+        <dd>Sistemas de sonido envolvente para PC. El número indica la cantidad de altavoces (5 o 7) más un subwoofer (0.1).</dd>
+
+        <dt>SSD (Solid-State Drive)</dt>
+        <dd>Unidad de estado sólido que usa memoria flash para almacenar datos, ofreciendo mayor velocidad, durabilidad y eficiencia que un disco duro tradicional (HDD).</dd>
+
+        <dt>USB (Universal Serial Bus)</dt>
+        <dd>Estándar de conexión universal que permite conectar periféricos a una computadora de forma sencilla. Evolucionó de USB 1.0 a USB 3.0 y más allá.</dd>
+
+        <dt>NAS (Network Attached Storage)</dt>
+        <dd>Dispositivo de almacenamiento que se conecta a una red, permitiendo a los usuarios acceder a sus archivos desde cualquier dispositivo en la misma red.</dd>
+
+        <dt>OLED (Organic Light-Emitting Diode)</dt>
+        <dd>Tecnología de pantalla que utiliza diodos orgánicos para emitir luz, lo que resulta en negros perfectos y un contraste superior.</dd>
+
+        <dt>NVMe M.2</dt>
+        <dd>Protocolo y formato para SSD que se conectan directamente a la placa base, ofreciendo velocidades de transferencia significativamente más rápidas que las SSD SATA.</dd>
+    </dl>
+    
     <h2 id="bibliography">Fuentes y Referencias</h2>
     <div class="bibliography">
         <ul>
